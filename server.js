@@ -15,6 +15,10 @@ app.use(express.json());
 const chapterRoutes = require("./routes/chapterRoutes");
 app.use("/api/v1/chapters", chapterRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Mathongo backend assignment");
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("server running ar port 3000");
 });
